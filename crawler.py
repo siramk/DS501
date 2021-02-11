@@ -35,7 +35,7 @@ for query in queries:
 		if content:
 			data[queries.index(query)].append(content)
 			url_count += 1
-		if url_count == 3:
+		if url_count == 20:
 			break
 
 with open('data', 'w') as f:
