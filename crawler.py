@@ -3,6 +3,8 @@ import requests
 import time
 from bs4 import BeautifulSoup
 import json
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 queries = ["Computer Science" ,"IITs in India", "Cities of Chhatisgarh"]
@@ -17,7 +19,7 @@ for query in queries:
 		print(url)
 		time.sleep(5)
 
-		response = requests.get(url)
+		response = requests.get(url, verify = False)
 		soup = BeautifulSoup(response.content, 'html5lib')
 
 		paras = soup.find_all('p')
