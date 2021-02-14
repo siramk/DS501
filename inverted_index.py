@@ -46,7 +46,7 @@ for doc in data:
 			inverted_index[word] = [doc_id]
 
 inverted_index = OrderedDict(sorted(inverted_index.items()))
-with open('inverted_index', 'w') as f:
+with open('inverted_index_stem', 'w') as f:
     json.dump(inverted_index, f, indent=4)
 
 # lis = []
