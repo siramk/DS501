@@ -6,9 +6,9 @@ import json
 
 
 queries = ["Computer Science" ,"IITs in India", "Cities of Chhatisgarh"]
+pages = 20
 
-
-data = [[], [], []]
+data = {}
 
 
 for query in queries:
@@ -33,10 +33,15 @@ for query in queries:
 				count += 1
 
 		if content:
-			data[queries.index(query)].append(content)
 			url_count += 1
-		if url_count == 20:
+			index = 'd' + str(url_count) + '_q' + str(queries.index(query) + 1)
+			data[index] = {
+				'id': url_count + pages*queries.index(query),
+				'webpage_url': url,
+				'content': content
+			}
+		if url_count == pages:
 			break
 
 with open('data', 'w') as f:
-    f.write(json.dumps(data))
+    json.dump(data, f, indent=4)
