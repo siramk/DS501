@@ -1,0 +1,203 @@
+# -------------------------------------------------------------
+#                      CREATING INDEX
+#---------------------------------------------------------------
+
+PUT mytest
+{
+    "settings": {
+        "number_of_shards": 1,
+        "number_of_replicas": 0
+    },
+    "mappings": {
+        "properties": {
+            "mytext": {
+                "type": "text"
+                }
+            }
+        
+     }
+}
+
+#--------------------------------------------
+GET _cat/indices
+#--------------------------------------------
+
+#---------------------------------------------
+POST mytest/_doc/1
+{
+  "mytext":"Hello my name is Siddhartha. So IR : DS501 huh? ok,hmm."
+}
+#---------------------------------------------
+
+#--------------------------------------------
+GET mytest/_search
+#--------------------------------------------
+
+#--------------------------------------------
+DELETE mytest
+#--------------------------------------------
+
+
+
+
+# -------------------------------------------------------------
+#                      Analysis
+#----------------------------------------------------------------
+
+GET /_analyze
+{
+  "tokenizer" : "whitespace",
+  "filter" : ["lowercase"],
+  "char_filter" : ["html_strip"],
+  "text" : "THIS is a <b>test</b>"
+}
+
+
+#----------------------------------------------------------
+GET _analyze
+{
+  "tokenizer": "standard",
+  "filter": [ "ngram" ],
+  "text": "Quick fox"
+}
+
+
+#---------------------------------------------------------
+PUT ngram_custom_example
+{
+  "settings": {
+    "index": {
+      "max_ngram_diff": 2
+    },
+    "analysis": {
+      "analyzer": {
+        "default": {
+          "tokenizer": "whitespace",
+          "filter": [ "3_5_grams" ]
+        }
+      },
+      "filter": {
+        "3_5_grams": {
+          "type": "ngram",
+          "min_gram": 3,
+          "max_gram": 5
+        }
+      }
+    }
+  }
+}
+
+GET ngram_custom_example/_analyze
+{
+  "text": "Quick fox"
+}
+
+
+
+
+# -------------------------------------------------------------
+#                      Another Example
+#----------------------------------------------------------------
+PUT mytest1
+{ 
+    "settings": {
+        "analysis": {
+          "analyzer": {
+            "my_analyzer":{
+              "type":"custom",
+              "tokenizer":"standard",
+              "filter":[
+                "lowercase",
+                "english_stop"
+                ]
+            }
+          },
+          "filter": {
+            "english_stop":{
+               "type":"stop",
+               "stopwords":["the", "over"]
+            }
+          }
+        }, 
+        "number_of_shards": 1,
+        "number_of_replicas": 0
+    },
+    "mappings": {
+        "properties": {
+            "mytext": {
+                "type": "text",
+                 "analyzer":"my_analyzer" 
+                }
+            }
+     }
+}
+
+#----------------------------------------------------------#
+POST mytest1/_analyze
+{
+  "analyzer": "my_analyzer",
+  "text": "The 2 QUICK Brown-Foxes jumped over the lazy dog's bone."
+}
+
+#----------------------------------------------------------
+#----------------------------------------------------------
+POST mytest/_analyze
+{
+  "text": "The 2 QUICK Brown-Foxes jumped over the lazy dog's bone."
+}
+
+# ----------------------------------------------------------
+POST mytest1/_doc/1
+{
+  "mytext":"The 2 QUICK Brown-Foxes jumped over the lazy dog's bone."
+}
+
+#----------------------------------------------------------
+GET mytest/_search
+
+
+# -------------------------------------------------------------
+#                     Search
+#-------------------------------------------------------------
+
+GET netflix/_search
+#-----------------------------------------------------------
+GET netflix/_search
+{
+  "query": {
+    "match": {
+      "release_year": 2020
+    }
+  }
+}
+
+#------------------------------------------------------------
+GET netflix/_search
+{
+  "query": {
+    "match_bool_prefix" : {
+      "description" : "In a"
+    }
+  }
+}
+
+#------------------------------------------------------------
+GET netflix/_search
+{
+  "query": {
+    "query_string": {
+      "query": "(Bra?il) OR (In*)",
+      "default_field": "country"
+    }
+  }
+}
+
+# -------------------------------------------------------------
+#                      Clear Indices
+#----------------------------------------------------------------
+
+GET _cat/indices
+DELETE mytest
+DELETE mytest1
+DELETE foo
+DELETE ngram_custom_example

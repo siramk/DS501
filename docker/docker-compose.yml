@@ -1,0 +1,53 @@
+version: '3.7'
+
+services:
+    
+
+    elasticsearch:
+      build:
+        context: ./elasticsearch
+      environment:
+        - node.name=elasticsearch
+        - "discovery.type=single-node"
+        - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      ports:
+        - 9200:9200
+      ulimits:
+        memlock:
+          soft: -1
+          hard: -1
+      volumes:
+        - data01:/usr/share/elasticsearch/data:rw
+      restart: on-failure
+
+    kibana:
+      image: docker.elastic.co/kibana/kibana:6.7.0
+      ports:
+        - 5601:5601
+      environment:
+        - ELASTICSEARCH_URL=http://elasticsearch:9200
+      restart: on-failure
+
+    python:
+        build:
+            context: ./python
+        volumes:
+          - ../src:/work/src:rw
+          - ../bin:/work/bin:rw
+          - ./python/scripts/bash_history:/root/.bash_history:rw
+        environment:
+          - SHA=1234
+          - PORT=5432
+          - ES_ENDPOINT=http://elasticsearch:9200
+          - TEST_SOURCE=docker
+          - SRC_DIR=/work/src
+          - ENV=dev
+        depends_on:
+            - elasticsearch
+            - kibana
+        restart: on-failure
+
+    
+volumes:
+  data01:
+    driver: local

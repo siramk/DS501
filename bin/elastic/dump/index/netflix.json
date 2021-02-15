@@ -1,0 +1,82 @@
+{
+    "settings": {
+        "analysis": {
+            "analyzer": {
+                "ngram_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "standard",
+                    "filter": [
+                        "lowercase",
+                        "4_grams"
+                    ]
+                },
+                "lowercase_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "standard",
+                    "filter": [
+                        "lowercase"
+                    ]
+                }
+            },
+            "filter": {
+                "4_grams": {
+                    "type": "ngram",
+                    "min_gram": 4,
+                    "max_gram": 4
+                }
+            }
+        },
+        "number_of_shards": 1,
+        "number_of_replicas": 0
+    },
+    "mappings": {
+        "data":{
+        "properties": {
+
+            "type": {
+                "type": "text",
+                "analyzer": "lowercase_analyzer"
+            },
+            "title": {
+                "type": "text",
+                "analyzer": "lowercase_analyzer"
+            },
+            "director": {
+                "type": "text",
+                "analyzer": "ngram_analyzer"
+            },
+            "cast": {
+                "type": "text",
+                "analyzer": "lowercase_analyzer"
+            },
+            "country": {
+                "type": "text",
+                "analyzer": "lowercase_analyzer"
+            },
+            "date_added": {
+                "type": "text",
+                "analyzer": "lowercase_analyzer"
+            },
+            "release_year": {
+                "type": "short"
+            },
+            "rating": {
+                "type": "text",
+                "analyzer": "lowercase_analyzer"
+            },
+            "duration": {
+                "type": "text",
+                "analyzer": "lowercase_analyzer"
+            },
+            "listed_in": {
+                "type": "text",
+                "analyzer": "lowercase_analyzer"
+            },
+            "description": {
+                "type": "text",
+                "analyzer": "lowercase_analyzer"
+            }
+        }
+        }
+    }
+}
