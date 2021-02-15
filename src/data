@@ -1,1 +1,302 @@
-[["Computer Science is the study of computers and computational systems. Unlike electrical and computer engineers, computer scientists deal mostly with software and software systems; this includes their theory, design, development, and application.Principal areas of study within Computer Science include artificial intelligence, computer systems and networks, security, database systems, human computer interaction, vision and graphics, numerical analysis, programming languages, software engineering, bioinformatics and theory of computing. ", "Computer science is the study of algorithmic processes, computational machines and computation itself.[1] As a discipline, computer science spans a range of topics from theoretical studies of algorithms, computation and information to the practical issues of implementing computational systems in hardware and software.[2][3]\nIts fields can be divided into theoretical and practical disciplines. For example, the theory of computation concerns abstract models of computation and general classes of problems that can be solved using them, while computer graphics or computational geometry emphasize more specific applications. Algorithms and data structures have been called the heart of computer science.[4] Programming language theory considers approaches to the description of computational processes, while computer programming involves the use of them to create complex systems. Computer architecture describes construction of computer components and computer-operated equipment. Artificial intelligence aims to synthesize goal-orientated processes such as problem-solving, decision-making, environmental adaptation, planning and learning found in humans and animals. A digital computer is capable of simulating various information processes.[5] The fundamental concern of computer science is determining what can and cannot be automated.[6] Computer scientists usually focus on academic research. The Turing Award is generally recognized as the highest distinction in computer sciences.\n", "Theoretical computer science (TCS) is a subset of general computer science and mathematics that focuses on mathematical aspects of computer science such as the theory of computation, lambda calculus, and type theory.\nIt is difficult to circumscribe the theoretical areas precisely. The ACM's Special Interest Group on Algorithms and Computation Theory (SIGACT) provides the following description:[1]\n"], ["Shiksha summarises a list of IITs in India along with their MHRD-NIRF 2020 ranking, BTech seat intake, number of B.Tech courses offered, and links to important information such as cut offs, placements, admission proccess & course fees.List of Top Ranking IITs", "Shiksha summarises a list of IITs in India along with their MHRD-NIRF 2020 ranking, BTech seat intake, number of B.Tech courses offered, and links to important information such as cut offs, placements, admission proccess & course fees.List of Top Ranking IITs", "The Indian Institutes of Technology (IITs) are the premier autonomous public technical and research universities located across India.[1] They are governed by the Institutes of Technology Act, 1961, which has declared them as Institutes of National Importance and lays down their powers, duties, and framework for governance.[2][3] The Institutes of Technology Act, 1961 lists twenty-three institutes.[4] Each IIT is autonomous, linked to the others through a common council (IIT Council), which oversees their administration. The Minister of Education is the ex officio Chairperson of the IIT Council.[5] As of 2020[update], the total number of seats for undergraduate programs in all IITs is 16,053.[6]\nThe history of the IIT system dates back to 1946 when Sir Jogendra Singh of the Viceroy's Executive Council set up a committee whose task was to consider the creation of Higher Technical Institutions for post-war industrial development in India. The 22-member committee, headed by Nalini Ranjan Sarkar, recommended the establishment of these institutions in various parts of India, along the lines of the Massachusetts Institute of Technology, with affiliated secondary institutions.[17]\n"], ["\n\nThere are 28 districts in the state of Chhattisgarh, which has a total population 25,540,196 as of 2011. Mainly Chhattisgarh(CG) state has large population in cities like Raipur, Bhilai, Jagdalpur and Bilaspur. Male and Female population in this state is 12,827,915 and 12,712,281 respectively (as in 2011).[1]\nUrban Agglomerations constituents with a population above 100,000 as per 2011 census are shown in the table below.[2]\n", "The population of the districts in the State of Chhattisgarh by census years.The population of all cities and towns in the State of Chhattisgarh by census years.", "\nChhattisgarh is a state in the East of India.\nHere are some of the most notable cities.\n"]]
+{
+    "d1_q1": {
+        "id": 1,
+        "webpage_url": "https://undergrad.cs.umd.edu/what-computer-science",
+        "content": "Computer Science is the study of computers and computational systems. Unlike electrical and computer engineers, computer scientists deal mostly with software and software systems; this includes their theory, design, development, and application.Principal areas of study within Computer Science include artificial intelligence, computer systems and networks, security, database systems, human computer interaction, vision and graphics, numerical analysis, programming languages, software engineering, bioinformatics and theory of computing. "
+    },
+    "d2_q1": {
+        "id": 2,
+        "webpage_url": "https://en.wikipedia.org/wiki/Computer_science",
+        "content": "Computer science is the study of algorithmic processes, computational machines and computation itself.[1] As a discipline, computer science spans a range of topics from theoretical studies of algorithms, computation and information to the practical issues of implementing computational systems in hardware and software.[2][3]\nIts fields can be divided into theoretical and practical disciplines. For example, the theory of computation concerns abstract models of computation and general classes of problems that can be solved using them, while computer graphics or computational geometry emphasize more specific applications. Algorithms and data structures have been called the heart of computer science.[4] Programming language theory considers approaches to the description of computational processes, while computer programming involves the use of them to create complex systems. Computer architecture describes construction of computer components and computer-operated equipment. Artificial intelligence aims to synthesize goal-orientated processes such as problem-solving, decision-making, environmental adaptation, planning and learning found in humans and animals. A digital computer is capable of simulating various information processes.[5] The fundamental concern of computer science is determining what can and cannot be automated.[6] Computer scientists usually focus on academic research. The Turing Award is generally recognized as the highest distinction in computer sciences.\n"
+    },
+    "d3_q1": {
+        "id": 3,
+        "webpage_url": "https://en.wikipedia.org/wiki/Theoretical_computer_science",
+        "content": "Theoretical computer science (TCS) is a subset of general computer science and mathematics that focuses on mathematical aspects of computer science such as the theory of computation, lambda calculus, and type theory.\nIt is difficult to circumscribe the theoretical areas precisely. The ACM's Special Interest Group on Algorithms and Computation Theory (SIGACT) provides the following description:[1]\n"
+    },
+    "d4_q1": {
+        "id": 4,
+        "webpage_url": "https://en.wikipedia.org/wiki/Outline_of_computer_science",
+        "content": "Computer science (also called computing science) is the study of the theoretical foundations of information and computation and their implementation and application in computer systems. One well known subject classification system for computer science is the ACM Computing Classification System devised by the Association for Computing Machinery.\nComputer science can be described as all of the following:\n"
+    },
+    "d5_q1": {
+        "id": 5,
+        "webpage_url": "https://en.wikipedia.org/wiki/Computer_science_and_engineering",
+        "content": "Computer Science & Engineering (CSE) is an academic program at many universities which comprises scientific and engineering aspects of computing. CSE is also a term often used in Europe to translate the name of engineering informatics academic programs.\nAcademic programs vary between colleges. Courses usually include introduction to programming, introduction to algorithms and data structures, computer architecture, operating systems, computer networks, parallel computing, embedded systems, algorithms design, circuit analysis and electronics, digital logic and processor design, computer graphics, scientific computing, software engineering, database systems, digital signal processing, virtualization, computer simulations and games programming. CSE programs also include core subjects of theoretical computer science such as theory of computation, numerical methods, machine learning, programming theory and paradigms. Modern academic programs also cover emerging computing fields like image processing, data science, robotics, bio-inspired computing, computational biology, autonomic computing and artificial intelligence.[1] Most of the above CSE areas require initial mathematical knowledge, hence the first year of study is dominated by mathematical courses, primarily discrete mathematics, mathematical analysis, linear algebra and statistics, as well as the basics of physics - field theory and electromagnetism.\n"
+    },
+    "d6_q1": {
+        "id": 6,
+        "webpage_url": "https://en.wikipedia.org/wiki/Computer_architecture",
+        "content": "In computer engineering, computer architecture is a set of rules and methods that describe the functionality, organization, and implementation of computer systems. Some definitions of architecture define it as describing the capabilities and programming model of a computer but not a particular implementation.[1] In other definitions computer architecture involves instruction set architecture design, microarchitecture design, logic design, and implementation.[2]\nThe first documented computer architecture was in the correspondence between Charles Babbage and Ada Lovelace, describing the analytical engine. When building the computer Z1 in 1936, Konrad Zuse described in two patent applications for his future projects that machine instructions could be stored in the same storage used for data, i.e., the stored-program concept.[3][4] Two other early and important examples are:\n"
+    },
+    "d7_q1": {
+        "id": 7,
+        "webpage_url": "https://www.britannica.com/science/computer-science",
+        "content": "Our editors will review what you\u2019ve submitted and determine whether to revise the article.Computer science,  the study of computers and computing, including their theoretical and algorithmic foundations, hardware and software, and their uses for processing information. The discipline of computer science includes the study of algorithms and data structures, computer and network design, modeling data and information processes, and artificial intelligence. Computer science draws some of its foundations from mathematics and engineering and therefore incorporates techniques from areas such as queueing theory, probability and statistics, and electronic circuit design. Computer science also makes heavy use of hypothesis testing and experimentation during the conceptualization, design, measurement, and refinement of new algorithms, information structures, and computer architectures."
+    },
+    "d8_q1": {
+        "id": 8,
+        "webpage_url": "https://www.edx.org/course/subject/computer-science",
+        "content": "Real college courses from Harvard, MIT, and more of the world\u2019s leading universities.Nationally in Computer Science"
+    },
+    "d9_q1": {
+        "id": 9,
+        "webpage_url": "https://www.khanacademy.org/computing/computer-science",
+        "content": "If you're seeing this message, it means we're having trouble loading external resources on our website.\n             If you're behind a web filter, please make sure that the domains *.kastatic.org and *.kasandbox.org are unblocked.\n\n        "
+    },
+    "d10_q1": {
+        "id": 10,
+        "webpage_url": "https://www.coursera.org/browse/computer-science",
+        "content": "Computer science Specializations and courses teach software engineering and design, algorithmic thinking, human-computer interaction, programming languages, and the history of computing. Courses in this broad field will help you think abstractly, approach problems methodically, and develop sound solutions.Computers are an essential part of our internet-enabled lives today, but what does it mean to study computer science? Computer science, often referred to as CS, is a broad field encompassing the study of computer systems, computational thinking and theory, and the design of software programs that harness the power of this hardware to process data."
+    },
+    "d11_q1": {
+        "id": 11,
+        "webpage_url": "https://www.internationalstudent.com/study-computer-science/what-is-computer-science/",
+        "content": "Register Now!Computer science is the third most popular major amongst international students coming to the United\n\tStates. Therfe are many reasons that computer science is so popular, including exceptional job security, uncommonly\n\thigh starting salaries, and diverse job opportunities across industries. However, an international student\n\tcontemplating studying computer science needs to ask themself, \"What is computer science?\"\n"
+    },
+    "d12_q1": {
+        "id": 12,
+        "webpage_url": "https://www.topuniversities.com/courses/computer-science-information-systems/guide",
+        "content": "Share viaShare this Page"
+    },
+    "d13_q1": {
+        "id": 13,
+        "webpage_url": "https://www.seas.harvard.edu/computer-science",
+        "content": "Read the latest updates on coronavirus from Harvard University. For SEAS specific-updates, please visit SEAS & FAS Division of Science: Coronavirus FAQsComputer Science at the Harvard School of Engineering studies both the fundamentals of computation and computation\u2019s interaction with the world. Computer scientists develop new algorithms, invent new systems and theories that empower people and society, and advance the science of computing while working with engineers, scientists, social scientists, lawyers, artists, and others around the university and beyond."
+    },
+    "d14_q1": {
+        "id": 14,
+        "webpage_url": "https://engineering.buffalo.edu/computer-science-engineering.html",
+        "content": "COVID-19 UPDATES\u00a0 \u2022\u00a0 2/5/2021Dr. Qiao welcomes the CSE community back for a happy, healthy, and successful Spring 2021.\u00a0 Click here to watch the video."
+    },
+    "d15_q1": {
+        "id": 15,
+        "webpage_url": "https://www.classcentral.com/subject/cs",
+        "content": "In 2020, the big MOOC providers got bigger, and the biggest one pulled further ahead of the rest.\nOrganize and share your learning with Class Central Lists. View our Lists Showcase"
+    },
+    "d16_q1": {
+        "id": 16,
+        "webpage_url": "https://engineering.virginia.edu/departments/computer-science",
+        "content": "UVA Engineering computer science Ph.D. doctoral candidate and alumna tapped to present at the 2020 Rising Stars Workshop for women in computer science and electrical engineering.Josephine Lamp, a University of Virginia computer science Ph.D. student, is leading a research project that is creating a lifeline to better treatment for heart failure patients."
+    },
+    "d17_q1": {
+        "id": 17,
+        "webpage_url": "https://www.computerscience.org/",
+        "content": "Connect with the rapidly growing and evolving fields of computer science and uncover how to reach your full potential.Code your future. Find a program that speaks your language."
+    },
+    "d18_q1": {
+        "id": 18,
+        "webpage_url": "https://github.com/ossu/computer-science",
+        "content": "\n        \n\ud83c\udf93 Path to a free self-taught education in Computer Science!\n      \n        Use Git or checkout with SVN using the web URL.\n    "
+    },
+    "d19_q1": {
+        "id": 19,
+        "webpage_url": "https://cse.umn.edu/cs",
+        "content": " CS&E has grown from a small group of visionary numerical analysts into a worldwide leader in computing education, research, and innovation. His talk is titled \"Learning Like a Human: How, Why, and When\"."
+    },
+    "d20_q1": {
+        "id": 20,
+        "webpage_url": "https://engineering.tamu.edu/cse/index.html",
+        "content": "Important Notice\n\t\t\t\t\t\t\t\t\t\t\t\t    Texas A&M Engineering COVID-19\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tup-to-date information\u00a0\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t    \n\t\t\t\t\t"
+    },
+    "d1_q2": {
+        "id": 21,
+        "webpage_url": "https://www.shiksha.com/b-tech/articles/iits-in-india-blogId-12884?sa=X&ved=2ahUKEwjBsrzgh-nuAhWXf30KHRwhBtYQ9QF6BAgHEAI",
+        "content": "Shiksha summarises a list of IITs in India along with their MHRD-NIRF 2020 ranking, BTech seat intake, number of B.Tech courses offered, and links to important information such as cut offs, placements, admission proccess & course fees.List of Top Ranking IITs"
+    },
+    "d2_q2": {
+        "id": 22,
+        "webpage_url": "https://www.shiksha.com/b-tech/articles/iits-in-india-blogId-12884",
+        "content": "Shiksha summarises a list of IITs in India along with their MHRD-NIRF 2020 ranking, BTech seat intake, number of B.Tech courses offered, and links to important information such as cut offs, placements, admission proccess & course fees.List of Top Ranking IITs"
+    },
+    "d3_q2": {
+        "id": 23,
+        "webpage_url": "https://en.wikipedia.org/wiki/Indian_Institutes_of_Technology",
+        "content": "The Indian Institutes of Technology (IITs) are the premier autonomous public technical and research universities located across India.[1] They are governed by the Institutes of Technology Act, 1961, which has declared them as Institutes of National Importance and lays down their powers, duties, and framework for governance.[2][3] The Institutes of Technology Act, 1961 lists twenty-three institutes.[4] Each IIT is autonomous, linked to the others through a common council (IIT Council), which oversees their administration. The Minister of Education is the ex officio Chairperson of the IIT Council.[5] As of 2020[update], the total number of seats for undergraduate programs in all IITs is 16,053.[6]\nThe history of the IIT system dates back to 1946 when Sir Jogendra Singh of the Viceroy's Executive Council set up a committee whose task was to consider the creation of Higher Technical Institutions for post-war industrial development in India. The 22-member committee, headed by Nalini Ranjan Sarkar, recommended the establishment of these institutions in various parts of India, along the lines of the Massachusetts Institute of Technology, with affiliated secondary institutions.[17]\n"
+    },
+    "d4_q2": {
+        "id": 24,
+        "webpage_url": "https://en.wikipedia.org/wiki/IIT_Delhi",
+        "content": "Indian Institute of Technology Delhi (abbreviated as IIT Delhi) is a public technical and research university located in Hauz Khas, Delhi, India. It is one of the oldest Indian Institutes of Technology in India.\nEstablished in 1961, was formally inaugurated August 1961 by Prof. Humayun Kabir, Minister of Scientific Research & Cultural Affairs. First admissions were made in 1961.[4] The current campus has an area of 320 acres (or 1.3\u00a0km2) and is bounded by the Sri Aurobindo Marg on the east, the Jawaharlal Nehru University Complex on the west, the National Council of Educational Research and Training on the south, and the New Ring Road on the north, and flanked by Qutub Minar and the Hauz Khas monuments.[3]\n"
+    },
+    "d5_q2": {
+        "id": 25,
+        "webpage_url": "https://en.wikipedia.org/wiki/IIT_Roorkee",
+        "content": "Indian Institute of Technology Roorkee (abbreviated IIT Roorkee or IITR)  is a premier public technical and research university located in Roorkee, Uttarakhand, India, headed by Director Ajit Kumar Chaturvedi. It is formerly known as University of Roorkee (1949-2001) and Thomason College of Civil Engineering (1847-1949). Established in 1847 in British India by the then lieutenant governor, Sir James Thomason, it is the oldest technical institution in Asia. It was given university status in 1949 and was converted into an Indian Institute of Technology (IIT) in 2001, thus becoming the seventh IIT to be declared. \nIIT Roorkee has 22 academic departments covering Engineering, Applied Sciences, Humanities & Social Sciences and Management programs with a strong emphasis on scientific and technological education and research.[2]\nIIT Roorkee has a strong entrepreneurial culture, with many alumni who have moved on to found technological and social ventures in India and abroad, and have played an important role in the development of India. Ten alumni have won the Padma awards and twenty-five alumni have won the Shanti Swarup Bhatnagar Prize for Science and Technology. The institute has produced seven chairmen of the Indian Railway Board, chairman of the Telecom Regulatory Authority of India, more than a hundred secretary-level officers in the Government of India, two presidents of the Confederation of Indian Industry, Governors of states of India, chairmen of University Grants Commission (India), six directors of the Indian Institutes of Technology, Chancellors and Vice-Chancellors of prominent Indian Universities, and presidents of Engineering and Scientific organizations like the Indian Institution of Engineers, the Indian National Science Academy and the Indian National Academy of Engineering.[3]\n"
+    },
+    "d6_q2": {
+        "id": 26,
+        "webpage_url": "https://en.wikipedia.org/wiki/IIT_Dharwad",
+        "content": "Indian Institute of Technology Dharwad (IIT Dharwad or IIT DH) is an autonomous premier engineering and technology institute in Dharwad, Karnataka, India. IIT Dharwad started functioning from July 2016 in a temporary campus, previously of the Water and Land Management Institute (WALMI) in Belur village, on the outskirts of Dharwad city.[3] It was formally inaugurated on 28 August 2016.[4] For the academic year 2016\u20132017, the institute offered B.Tech courses in three branches, viz. Electrical Engineering, Computer Science, and Mechanical Engineering.[5]\nAs part of the mentorship plan, IIT Bombay is the mentor institute for IIT Dharwad. The HRD Ministry has set up an IIT monitoring cell at IIT Bombay. The committee members were designated as officials on special duty to supervise the process of setting up IIT Dharwad.[6][7]\n"
+    },
+    "d7_q2": {
+        "id": 27,
+        "webpage_url": "https://en.wikipedia.org/wiki/IIT_Goa",
+        "content": "Indian Institute of Technology Goa (IIT Goa) is an autonomous premier engineering and technology university located in Goa. Ever since an IIT was allotted to Goa by the Central government in 2014, the new Indian Institute of Technology (IIT) at Goa started functioning from July, 2016 in a temporary campus housed at Goa Engineering College (GEC) Campus located at Farmagudi, Goa.[3][4] Currently, it offers BTech, MTech and PhD courses in various core and one non-core branches majorly in Electrical Engineering, Computer Science and Engineering, Mechanical Engineering and Mathematics and Computing. It also offers MTech and PhD courses.\nAs part of the mentorship plan, IIT-Bombay was the mentor for IIT-Goa for three pioneer years. The HRD Ministry had set up an IIT monitoring cell at IIT-Bombay and the committee members had been designated as officials on special duty to supervise the process of setting up IIT-Goa.[5]\n"
+    },
+    "d8_q2": {
+        "id": 28,
+        "webpage_url": "https://www.collegedekho.com/articles/list-of-iit-colleges-in-india-admission-basis-jee-advanced/",
+        "content": "ISC 12th Date Sheet 2021 will be announced by Council for the Indian School ...The CAP Round 1 seat allotment result for Maharashtra B.Sc Admission 2020 has been ..."
+    },
+    "d9_q2": {
+        "id": 29,
+        "webpage_url": "https://en.wikipedia.org/wiki/IIT_Kharagpur",
+        "content": "Indian Institute of Technology Kharagpur (IIT Kharagpur) is a public technical and research university established by the government of India in 1951. It is the first of the IITs to be established and is recognised as an Institute of National Importance. In 2019 it was awarded the status of Institute of Eminence by the government of India.[5]\nThe institute was initially established to train scientists and engineers after India attained independence in 1947. However, over the years, the institute's academic capabilities diversified with offerings in management, law, architecture, humanities, etc. IIT Kharagpur has an 8.7-square-kilometre (2,100-acre) campus and has about 22,000 residents.\n"
+    },
+    "d10_q2": {
+        "id": 30,
+        "webpage_url": "https://engineering.careers360.com/colleges/list-of-top-iit-colleges-in-india",
+        "content": "Search Courses and IITS in India \u2013 Courses, Fees, Reviews, Location, Ownership. Filter by location, fees, exams, degree, branch etc.Regular exam updates, QnA, Predictors, College Applications & E-books now on your Mobile"
+    },
+    "d11_q2": {
+        "id": 31,
+        "webpage_url": "https://www.aicte-india.org/education/institutions/IITs",
+        "content": "The Indian Institutes of Technology (IITs) are a group of fifteen autonomous prestigious engineering and technology-oriented institutes of higher education established and declared as Institutes of National Importance by the Parliament of India. The IITs were created to train scientists and engineers, with the aim of developing a skilled workforce to support the economic and social development of India after independence in 1947.In order of establishment, they are located in Kharagpur (1950; as IIT 1951), Mumbai (1958), Chennai (1959), Kanpur (1959), Delhi (1961; as IIT 1963), Guwahati (1994), Roorkee (1847; as IIT 2001), Bhubaneswar (2008), Gandhinagar (2008), Hyderabad (2008), Patna (2008), Punjab (2008), Rajasthan (2008), Indore (2009) and Mandi (2009). Some IITs were established with financial assistance and technical expertise from UNESCO, Germany, the United States,Japan and Soviet Union. Each IIT is an autonomous university, linked to the others through a common IIT Council, which oversees their administration."
+    },
+    "d12_q2": {
+        "id": 32,
+        "webpage_url": "https://home.iitd.ac.in/",
+        "content": "Deepak KumarDepartment of PhysicsLatest Issue: November 2020"
+    },
+    "d13_q2": {
+        "id": 33,
+        "webpage_url": "https://byjus.com/jee/top-iits-in-india/",
+        "content": "Top IITs in India \u2013 The Ministry of Human Resource Development, MHRD has now announced NIRF (National Institutional Ranking Framework) Ranking for top Engineering colleges in the country. IIT Madras has won the first position. IIT Delhi and IIT Bombay are in second and third positions, respectively. These three institutes have been securing the same ranks for the last three years. This article covers a list of the top IITs in India.\u00a0NIRF was launched in 2015 for the purpose of ranking higher learning institutes in India. From 2016, NIRF ranked universities and colleges in 4 categories. In 2019, the number of categories was increased to 8 and an overall ranking was also published. IIT Madras has been at the top in the overall category since 2016. Here is a list of IITs along with NIRF ranking and score, which helps the candidates to select the best college after clearing their JEE 2021 exam."
+    },
+    "d14_q2": {
+        "id": 34,
+        "webpage_url": "http://www.studyguideindia.com/Colleges/IIT/",
+        "content": "You may not get the full functionality of this website because JavaScript is either disabled or not supported by your browser. Please check your browser settings and enable javascript.Getting into Indian Institute of technology (IIT) is the dream of every engineer in India. The IIT were formed to train scientists and engineer. All the courses provided by Indian Institute of Technology (IIT) are governed by All-India Council of technical Education (AICTE) which was established in the year 1945. Indian institute of technology are the best institute to study technology and science. The first IIT was recognized in kharagpur in the year 1951 and IIT Rookee was the first engineering college in India. "
+    },
+    "d15_q2": {
+        "id": 35,
+        "webpage_url": "https://www.iitsystem.ac.in/?q=history/view",
+        "content": "Dr. Humayun Kabir played an important role in establishing IITs. He encouraged Dr B. C. Roy, the Chief Minister of West Bengal to work on Sir Ardeshir's proposal for a IIT. In 1945, Dr Kabir along with Sir Jogendra Singh of the Viceroy's Executive Council (Department of Education, Health and Agriculture) set up a 22 member committee to prepare a proposal, and made Sir Nalini Ranjan Sarkar the chairman. The Sarkar Committee recommended in 1945 that at least four Higher Technical Institutes on the lines of famous Massachusetts Institute of Technology, U.S.A. be established in the Eastern, Western, Northern and Southern regions of the country.Post Independence, it was  Pandit Jawaharlal Nehru  who pioneered establishing of the Indian Institutes of Technology to provide trained technical personnel of international class to the nation who would act as leaders in technology for the newly born independent India. Nehru, being an enthusiast and patron of science, was clear that science and technology had a prominent role to play in modernizing India and meeting the needs of its growing population. He envisioned that the IIT system would over time provide scientists and technologists of the highest caliber who would engage in research, design and development to help building the nation towards self-reliance in her technological needs."
+    },
+    "d16_q2": {
+        "id": 36,
+        "webpage_url": "https://raoiit.com/about-iit.php",
+        "content": "The Indian Institutes of Technology (popularly known as the IITs) are institutions of national importance established through an Act of Parliament\n                        for fostering excellence in education. There are fifteen IITs at present, located in Bhubaneswar, Bombay (Mumbai), Delhi, Gandhinagar, Guwahati, \n                        Hyderabad, Indore, Kanpur, Kharagpur, Madras (Chennai), Mandi, Patna, Ropar, Jodhpur and Roorkee. Over the years IITs have created world class \n                        educational platforms dynamically sustained through internationally recognized research based on excellent infrastructural facilities. The faculty \n                        and alumni of IITs continue making a huge impact in all sectors of society, both in India and abroad. Banaras Hindu University (IT-BHU, now known as\n                        IIT-BHU since 2012), Varanasi and Indian School of Mines (ISM), Dhanbad, are amongst the oldest institutions in India and are known for their \n                        immense contributions towards society at large and for science and technology in particular.\n                     The primary objectives behind such institutions are to: "
+    },
+    "d17_q2": {
+        "id": 37,
+        "webpage_url": "https://www.getmyuni.com/college/articles/all-iits-in-india",
+        "content": "Advanced SearchPlease complete the steps to help our experts guide you get right career."
+    },
+    "d18_q2": {
+        "id": 38,
+        "webpage_url": "https://www.iitsystem.ac.in/?q=aboutiit/view",
+        "content": "\u00a9 IIT Council All Rights Reserved"
+    },
+    "d19_q2": {
+        "id": 39,
+        "webpage_url": "https://www.collegesearch.in/exam/jee-advanced/article/top-10-iits-in-india-2020-29-174",
+        "content": "After 12th\n                        Post Graduation\n                        "
+    },
+    "d20_q2": {
+        "id": 40,
+        "webpage_url": "http://www.academics-india.com/iit.htm",
+        "content": "\n\t\tT \n\t\tRamaswamy Committee Report on Alternate Admission System for engineering \n\t\tprogramme.\n\t\tAnil \n\t\tKakodkar committee report on IIT autonomy measures"
+    },
+    "d1_q3": {
+        "id": 41,
+        "webpage_url": "https://en.wikipedia.org/wiki/List_of_cities_in_Chhattisgarh_by_population",
+        "content": "\n\nThere are 28 districts in the state of Chhattisgarh, which has a total population 25,540,196 as of 2011. Mainly Chhattisgarh(CG) state has large population in cities like Raipur, Bhilai, Jagdalpur and Bilaspur. Male and Female population in this state is 12,827,915 and 12,712,281 respectively (as in 2011).[1]\nUrban Agglomerations constituents with a population above 100,000 as per 2011 census are shown in the table below.[2]\n"
+    },
+    "d2_q3": {
+        "id": 42,
+        "webpage_url": "https://www.citypopulation.de/en/india/chhattisgarh/",
+        "content": "The population of the districts in the State of Chhattisgarh by census years.The population of all cities and towns in the State of Chhattisgarh by census years."
+    },
+    "d3_q3": {
+        "id": 43,
+        "webpage_url": "https://www.worldlistmania.com/list-largest-cities-chhattisgarh/",
+        "content": "Chhattisgarh is the state in India, located in the central part of the country, is formed in November 2000, the 10th extensive with an area of 135,190 km2 and 16th most populous with a population of 25.5 million at the density of 190 inhabitants per km2. Raipur is the largest and capital city of Chhattisgarh state covered an area of 116 km2 with a population of 1.12 million (estimate of 2011) at a density of 9,683 inhabitants per km2, located in the Raipur District.Population Census India"
+    },
+    "d4_q3": {
+        "id": 44,
+        "webpage_url": "https://en.wikivoyage.org/wiki/Chhattisgarh",
+        "content": "\nChhattisgarh is a state in the East of India.\nHere are some of the most notable cities.\n"
+    },
+    "d5_q3": {
+        "id": 45,
+        "webpage_url": "https://www.indianholiday.com/chhattisgarh/cities/",
+        "content": "Asia & Rest of the worldFor Inbound Tours:\n                        (Foreign nationals including NRI visiting India)"
+    },
+    "d6_q3": {
+        "id": 46,
+        "webpage_url": "http://www.famousplacesinindia.in/Chhattisgarh/Famous-Cities-in-Chhattisgarh.aspx",
+        "content": "Raipur is a city in the Raipur district of the Indian state of Chhattisgarh. It is the capital city of the state of Chhattisgarh and is the administrative headquarters of Raipur district. It is also the largest city in Chhattisgarh. It was formerly a part of Madhya Pradesh before the state of Chhattisgarh was formed on 1 November 2000.Kawardha is a city and a municipality in Kabirdham district in the Indian state of Chhattisgarh. Kawardha is also known for the Temple of Bhoramdeo."
+    },
+    "d7_q3": {
+        "id": 47,
+        "webpage_url": "https://chhattisgarh.pscnotes.com/chhatttisgarh-geography/chattishgarh-major-cities-and-tourist-places/",
+        "content": "  CGPCS Exam Preparation  CGPCS Prelims and Mains Notes, CGPCS Test Series"
+    },
+    "d8_q3": {
+        "id": 48,
+        "webpage_url": "https://www.wikizero.com/en/List_of_cities_in_Chhattisgarh_by_population",
+        "content": " From Wikipedia the free encyclopedia  There are 28 districts in the state of Chhattisgarh, which has a total population 25,540,196 as of 2011. Mainly Chhattisgarh(CG) state has large population in cities like Raipur, Bhilai, Jagdalpur and Bilaspur. Male and Female population in this state is 12,827,915 and 12,712,281 respectively (as in 2011).[1] "
+    },
+    "d9_q3": {
+        "id": 49,
+        "webpage_url": "http://explore-chhattisgarh.blogspot.com/2010/01/cities-of-chhattisgarh.html",
+        "content": "\n\n\nChhattisgarh Tourism website. Explore c.g. district maps, monuments archeology excavation inscriptions, temple mandir, folk dance music, tribes, waterfalls, lifestyle, wildlife sanctuary,                       \nnational park, history, metal art, industries, railway train, airport aviation, highway roads, cities towns villages, rivers nadi, dams, nature using Photos, Videos and Maps.readers input highly appriciated."
+    },
+    "d10_q3": {
+        "id": 50,
+        "webpage_url": "https://www.mapsofindia.com/maps/chhattisgarh/cities.html",
+        "content": "Disclaimer: All efforts have been made to make this image accurate. However Compare Infobase Limited and its directors do not own any responsibility for the correctness or authenticity of the same."
+    },
+    "d11_q3": {
+        "id": 51,
+        "webpage_url": "https://www.travelmath.com/cities-in/Chhattisgarh",
+        "content": "This is a list of the 15 biggest cities in Chhattisgarh. Scroll down the page to see a longer list of smaller cities.  Larger cities are listed first\nso you can find a major airport if you're booking a flight.The largest cities in Chhattisgarh are shown\nat the top of the page.  We currently have data on 58 cities in Chhattisgarh.\nHere is a list of some of the smaller towns."
+    },
+    "d12_q3": {
+        "id": 52,
+        "webpage_url": "https://www.britannica.com/place/Chhattisgarh",
+        "content": "Our editors will review what you\u2019ve submitted and determine whether to revise the article.Chhattisgarh,  state of east-central India. It is bounded by the Indian states of Uttar Pradesh and Jharkhand to the north and northeast, Odisha (Orissa) to the east, Telangana (formerly part of Andhra Pradesh) to the south, and Maharashtra and Madhya Pradesh to the west. Its capital is Raipur. Area 52,199 square miles (135,194 square km). Pop. (2011) 25,540,196."
+    },
+    "d13_q3": {
+        "id": 53,
+        "webpage_url": "https://www.britannica.com/place/Raipur",
+        "content": "Our editors will review what you\u2019ve submitted and determine whether to revise the article.Raipur,  city, capital of Chhattisgarh state, east-central India. It is situated in the central Chhattisgarh Plain and is bordered to the east by the Mahanadi River."
+    },
+    "d14_q3": {
+        "id": 54,
+        "webpage_url": "https://www.chips.gov.in/our-state",
+        "content": "The Tenth largest state of India was carved out of Madhya Pradesh on 1st of November, 2000. Covering an area of 1.35 Lac Sq Km, Chhattisgarh can broadly be divided into Central plains drained by Mahanadi and Sheonath Rivers, the picturesque Norther Plateau and the enchanting Bastar Plateau. With more than 45% forest cover, Chhattisgarh provides a unique milieu of Tribal culture/ values which have blended seamless with subsequent waves of people who have come to call this place as their home. Strategically located at the \u2018heart\u2019 of India, Chhattisgarh has had influence of all North and South, as well as East and West. This lends a cosmopolitan culture with high value attached to personal independence, women empowerment etc.The gender ratio for Chhattisgarh according to the 2011 census was 991, Chhattisgarh has a high female-male sex ratio (991)[39] ranking at the 5th position among other states of India. Although this ratio is small compared to other states, it is unique in India because Chhattisharh is \u2014 the 10th largest state in India. The gender ratio in Rural areas is 1000, but the urban gender ratio, on the other hand is very low at just 917. The trend of a very low urban gender ratio is common across different groups in Chhattisgarh. The gender ratio amongst the tribal groups in the state, based on the 1991 census was 1009, but it falls to a low of just 920 for urban areas. Similarly the gender ratio for all scheduled castes was 987, whereas it was 853 in urban areas. It is not only the tribal communities that have a high gender ratio. The non-scheduled tribes and castes have a gender ratio of 971 in 1991. This figure is high and shows that women in Chhattisgarh are in a better condition in comparison to most of India."
+    },
+    "d15_q3": {
+        "id": 55,
+        "webpage_url": "https://www.flipkart.com/cities-towns-chhattisgarh/p/itm611854f34b1fe",
+        "content": "Flipkart Internet Private Limited,  Buildings Alyssa, Begonia & "
+    },
+    "d16_q3": {
+        "id": 56,
+        "webpage_url": "https://swachhindia.ndtv.com/air-pollution-chhattisgarh-bans-firecrackers-in-six-cities-28631/",
+        "content": "Mumbai: After imposing a ban on firecrackers during Diwali, the Chhattisgarh Environment Conservation Board (CECB) has disallowed bursting of crackers in six of its cities including the capital city of Raipur. The ban has \u00a0comes in to effect from December 1 and will continue till January 31. Besides Raipur, other cities where the ban has been imposed are Bilaspur, Bhilai, Durg, Raigarh and Korba. A statement issued by the State Environment Conservation Board said, the decision has been taken to control pollution which increases during winters due to the direction of wind.Also Read:\u00a0India\u2019s Firecracker Making Hub Sivakasi Sees 15% Drop In Business After SC Order To Ban Firecracker Sales In Delhi-NCR"
+    },
+    "d17_q3": {
+        "id": 57,
+        "webpage_url": "https://india.smartcitiescouncil.com/cities/raipur-chhattisgarh",
+        "content": " Show 5 results per page.ADVANCED GLOBAL SEARCH    In each of the 100 designated Smart Cities across the country, the selected City Data Officer (CDO) is currently undergoing a six-week training by the \"Smart Cities Mission\" and Tata Trusts."
+    },
+    "d18_q3": {
+        "id": 58,
+        "webpage_url": "https://villageinfo.in/chhattisgarh.html",
+        "content": "You don't have permission to access this resource."
+    },
+    "d19_q3": {
+        "id": 59,
+        "webpage_url": "https://www.census2011.co.in/census/state/districtlist/chhattisgarh.html",
+        "content": "Copyright Census Population 2021 Data"
+    },
+    "d20_q3": {
+        "id": 60,
+        "webpage_url": "https://www.iqair.com/us/india/chhattisgarh",
+        "content": "stateLAST UPDATE   (local time) "
+    }
+}
