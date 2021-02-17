@@ -23,4 +23,4 @@ app.add_url_rule('/genre_match_endpoint/<string:boolean_query>', 'genre_match_en
    
 if __name__ == '__main__': 
 
-    app.run(host="0.0.0.0", debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
