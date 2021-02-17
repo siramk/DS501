@@ -1,9 +1,11 @@
-import json
-import os
+from flask import jsonify
 from elasticsearch import Elasticsearch
-INDEX_NAME = "netflix"
 
-def scroll(pager, pageno):
+INDEX_NAME = "fixed_netflix"
+
+es = Elasticsearch("http://elasticsearch:9200/")
+
+def scroll_pagewise(pager, pageno):
     scroll_id = pager['_scroll_id']
     hits = pager['hits']['hits']
     scroll_size = len(hits)
@@ -24,7 +26,8 @@ def pagination_movie(pagesize, pageno):
         "query": {"term": {"type":  "Movie"}}
         }
     pager = es.search(index=INDEX_NAME, body=movie_body, scroll='1m', size=pagesize)
-    hits = scroll(pager, pageno)
+    hits = scroll_pagewise(pager, pageno)
+    return jsonify(hits)
 
 def pagination_tv(pagesize, pageno):
     tv_body = {
@@ -32,7 +35,8 @@ def pagination_tv(pagesize, pageno):
         "query": {"term": {"type":  "TV Show"}}
         }
     pager = es.search(index=INDEX_NAME, body=tv_body, scroll='1m', size=pagesize)
-    hits = scroll(pager, pageno)
+    hits = scroll_pagewise(pager, pageno)
+    return jsonify(hits)
 
 
 

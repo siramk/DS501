@@ -1,4 +1,4 @@
-FROM python:3.7.3-stretch
+FROM tiangolo/uwsgi-nginx:python3.7
 
 RUN apt-get -y update && apt-get install -y apt-transport-https
 

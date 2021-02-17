@@ -31,6 +31,8 @@ services:
     python:
         build:
             context: ./python
+        ports:
+            - 5000:5000
         volumes:
           - ../src:/work/src:rw
           - ../bin:/work/bin:rw
@@ -42,6 +44,9 @@ services:
           - TEST_SOURCE=docker
           - SRC_DIR=/work/src
           - ENV=dev
+          - STATIC_URL=/static
+          - STATIC_PATH= /work/src/app/static
+          - PYTHONPATH=/app
         depends_on:
             - elasticsearch
             - kibana

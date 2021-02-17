@@ -79,7 +79,7 @@
                 },
                 "description": {
                     "type": "text",
-                    "analyzer": "lowercase_analyzer"
+                    "analyzer": "keyword_analyzer"
                 }
             }
         }

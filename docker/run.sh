@@ -67,7 +67,7 @@ docker_run() {
   shift
   local cmd=$@
   docker_build $service
-  $COMPOSE run $service ${=cmd}
+  $COMPOSE run -p 5000:5000 $service ${=cmd}
 }
 
 _docker_test() {
