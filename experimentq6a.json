@@ -1,0 +1,392 @@
+GET  keyword_netflix/_search
+{
+  "query": {
+    "query_string": {
+      "query": "Comic Jim Gaffigan delivers his sardonic take on topics like eating, exercise",
+      "boost": 5.0
+    }
+  }
+}
+
+
+GET  netflix/_search
+{
+  "query": {
+    "query_string": {
+      "query": "\"Comic Jim Gaffigan delivers his sardonic take on topics like eating, exercise\""
+    }
+  }
+}
+
+
+GET  netflix/_search
+{
+  "query": {
+    "query_string": {
+      "query": "(too big) AND t*"
+    }
+  }
+}
+
+GET  netflix/_search
+{
+  "query": {
+    "query_string": {
+      "query": "(\"between the\") OR ((between) AND the*)",
+      "analyze_wildcard": true
+    }
+  }
+}
+
+GET  netflix/_search
+{
+  "query": {
+    "query_string": {
+      "query": " (between) AND  the*",
+      "analyze_wildcard": true
+    }
+  }
+}
+
+
+GET netflix/_search
+{
+  "query": {
+    "match_phrase": {
+      "description": "too  big"
+    }
+  }
+}
+
+GET netflix/_search
+{
+  "query": {
+    "simple_query_string" : {
+        "query": "of + technologi*",
+        "analyze_wildcard": true
+        }
+  }
+}
+
+GET netflix/_search
+{
+  "query": {
+    "simple_query_string" : {
+        "query": "between + them*"
+        }
+  }
+}
+
+
+GET  netflix/_search
+{
+    "query": {
+        "bool": {
+            "must": {
+                "query_string": {
+                    "query": "\"Comic Jim Gaffigan delivers his sardonic take on topics like eating, \"/exercis.*/",
+                    "analyze_wildcard": true
+                }
+            },
+            "boost": 2.0
+        }
+        
+    }
+}
+
+
+
+
+
+
+GET  keyword_netflix/_search
+{
+    "query": {
+        "bool": {
+            "must": {
+                "query_string": {
+                    "query": "In this documentary, architect Bjarke Ingels offers his vision for 2 World Trade Center as he aims to restore Manhattan's skyline to its former glory."
+                    
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+GET keyword_netflix/_search
+{
+  "query": {
+    "match_phrase": {
+      "description": "In this documentary, architect Bjarke Ingels offers his vision for 2 World Trade Center as he aims to restore Manhattan's skyline to its former glory."
+    }
+  }
+}
+
+GET keyword_netflix/_search
+{
+  "query": {
+    "match_phrase": {
+      "description": "to"
+    }
+  }
+}
+
+
+GET /keyword_netflix
+
+
+
+
+
+POST _reindex
+{
+  "source": {
+    "index": "netflix"
+  },
+  "dest": {
+    "index": "keyword_netflix"
+  }
+}
+
+GET  keyword_netflix/_search
+{
+    "query": {
+        "bool": {
+            "must": {
+                "query_string": {
+                    "query": "In this documentary, architect Bjarke Ingels offers his vision for 2 World Trade Center as he aims to restore Manhattan's skyline to its former glory."
+                    
+                }
+            }
+        }
+        
+    }
+}
+
+GET b_netflix/_search
+{
+  "query": {
+    "bool": {
+      "must_not": [
+        {"term": {
+          "type": {
+            "value": "Movie"
+          }
+        }}
+      ]
+    }
+  }
+}
+
+
+GET  keyword_netflix/_search
+{
+  "query": {
+    "query_string": {
+      "query": "/.*too big t.*/"
+    }
+  }
+}
+
+
+GET  keyword_netflix/_search
+{
+  "query": {
+    "query_string": {
+      "query": "/.*between the.*/"
+    }
+  }
+}
+
+GET  test_netflix_keyword/_search
+{
+  "query": {
+    "query_string": {
+      "query": "/.*order t.*/"
+    }
+  }
+}
+
+
+GET  keyword_netflix/_search
+{
+    "query": {
+        "bool": {
+            "must": {
+                "query_string": {
+      "query": "/.*romance.*/"
+    }
+            },
+            "must_not": [
+                {"match": {
+                    "rating": {
+                        "query": "TV-14"
+                    }
+                }}]
+        }
+        
+    }
+}
+
+GET  netflix/_search
+{
+    "query": {
+        "bool": {
+            "must_not": [
+                {"match": {
+                    "rating": {
+                        "query": "TV-14"
+                    }
+                }},
+                {"match": {
+                    "rating": {
+                        "query": "R"
+                    }
+                }},
+                {"match": {
+                    "rating": {
+                        "query": "NC"
+                    }
+                }},
+                {"match": {
+                    "rating": {
+                        "query": "PG"
+                    }
+                }}
+            ],
+            "must": {
+                "query_string": {
+                    "query": "/.*romance.*/"
+                }
+            }
+        }
+    }
+}
+
+
+
+GET  test_netflix_keyword/_search
+{
+    "query": {
+        "bool": {
+            "must_not": [
+                {"term": {"rating":"TV-14"}},
+                {"term": {"rating":"R"}},
+                {"term": {"rating":"NC"}}
+            ],
+            "must": {
+                "query_string": {
+                    "query": "/.*romance.*/"
+                }
+            }
+        }
+    }
+}
+
+
+
+
+POST _reindex
+{
+  "source": {
+    "index": "netflix"
+  },
+  "dest": {
+    "index": "b_netflix"
+  }
+}
+
+
+
+
+PUT b_netflix
+{
+    "settings": {
+        "analysis": {
+            "analyzer": {
+                "ngram_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "standard",
+                    "filter": [
+                        "lowercase",
+                        "4_grams"
+                    ]
+                },
+                "lowercase_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "standard",
+                    "filter": [
+                        "lowercase"
+                    ]
+                },
+                "keyword_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "keyword",
+                    "filter": [
+                        "lowercase"
+                    ]
+                }
+            },
+            "filter": {
+                "4_grams": {
+                    "type": "ngram",
+                    "min_gram": 4,
+                    "max_gram": 4
+                }
+            }
+        },
+        "number_of_shards": 1,
+        "number_of_replicas": 0
+    },
+    "mappings": {
+        "data": {
+            "properties": {
+                "type": {
+                    "type": "keyword"
+                    
+                },
+                "title": {
+                    "type": "text",
+                    "analyzer": "lowercase_analyzer"
+                },
+                "director": {
+                    "type": "text",
+                    "analyzer": "ngram_analyzer"
+                },
+                "cast": {
+                    "type": "text",
+                    "analyzer": "lowercase_analyzer"
+                },
+                "country": {
+                    "type": "text",
+                    "analyzer": "lowercase_analyzer"
+                },
+                "date_added": {
+                    "type": "text",
+                    "analyzer": "lowercase_analyzer"
+                },
+                "release_year": {
+                    "type": "short"
+                },
+                "rating": {
+                    "type": "keyword"
+                },
+                "duration": {
+                    "type": "text",
+                    "analyzer": "lowercase_analyzer"
+                },
+                "listed_in": {
+                    "type": "text",
+                    "analyzer": "lowercase_analyzer"
+                },
+                "description": {
+                    "type": "text",
+                    "analyzer": "keyword_analyzer"
+                }
+            }
+        }
+    }
+}

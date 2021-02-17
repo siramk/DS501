@@ -16,6 +16,13 @@
                     "filter": [
                         "lowercase"
                     ]
+                },
+                "keyword_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "keyword",
+                    "filter": [
+                        "lowercase"
+                    ]
                 }
             },
             "filter": {
@@ -30,53 +37,51 @@
         "number_of_replicas": 0
     },
     "mappings": {
-        "data":{
-        "properties": {
-
-            "type": {
-                "type": "text",
-                "analyzer": "lowercase_analyzer"
-            },
-            "title": {
-                "type": "text",
-                "analyzer": "lowercase_analyzer"
-            },
-            "director": {
-                "type": "text",
-                "analyzer": "ngram_analyzer"
-            },
-            "cast": {
-                "type": "text",
-                "analyzer": "lowercase_analyzer"
-            },
-            "country": {
-                "type": "text",
-                "analyzer": "lowercase_analyzer"
-            },
-            "date_added": {
-                "type": "text",
-                "analyzer": "lowercase_analyzer"
-            },
-            "release_year": {
-                "type": "short"
-            },
-            "rating": {
-                "type": "text",
-                "analyzer": "lowercase_analyzer"
-            },
-            "duration": {
-                "type": "text",
-                "analyzer": "lowercase_analyzer"
-            },
-            "listed_in": {
-                "type": "text",
-                "analyzer": "lowercase_analyzer"
-            },
-            "description": {
-                "type": "text",
-                "analyzer": "lowercase_analyzer"
+        "data": {
+            "properties": {
+                "type": {
+                    "type": "keyword"
+                    
+                },
+                "title": {
+                    "type": "text",
+                    "analyzer": "lowercase_analyzer"
+                },
+                "director": {
+                    "type": "text",
+                    "analyzer": "ngram_analyzer"
+                },
+                "cast": {
+                    "type": "text",
+                    "analyzer": "lowercase_analyzer"
+                },
+                "country": {
+                    "type": "text",
+                    "analyzer": "lowercase_analyzer"
+                },
+                "date_added": {
+                    "type": "text",
+                    "analyzer": "lowercase_analyzer"
+                },
+                "release_year": {
+                    "type": "short"
+                },
+                "rating": {
+                    "type": "keyword"
+                },
+                "duration": {
+                    "type": "text",
+                    "analyzer": "lowercase_analyzer"
+                },
+                "listed_in": {
+                    "type": "text",
+                    "analyzer": "lowercase_analyzer"
+                },
+                "description": {
+                    "type": "text",
+                    "analyzer": "lowercase_analyzer"
+                }
             }
-        }
         }
     }
 }

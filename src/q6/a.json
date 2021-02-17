@@ -1,0 +1,29 @@
+
+
+
+GET  test_netflix_keyword/_search
+{
+    "query": {
+        "bool": {
+            "must_not": [
+                {"term": {"rating":"TV-14"}},
+                {"term": {"rating":"R"}},
+                {"term": {"rating":"NC"}}
+            ],
+            "must": {
+                "query_string": {
+                    "query": "/.*romance.*/"
+                }
+            }
+        }
+    }
+}
+
+GET  test_netflix_keyword/_search
+{
+  "query": {
+    "query_string": {
+      "query": "/.*order t.*/"
+    }
+  }
+}
