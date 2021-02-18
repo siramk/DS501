@@ -1,7 +1,7 @@
 from flask import jsonify
 from elasticsearch import Elasticsearch
 
-INDEX_NAME = "fixed_netflix"
+INDEX_NAME = "netflix"
 
 
 es = Elasticsearch("http://elasticsearch:9200/")

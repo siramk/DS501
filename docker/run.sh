@@ -97,9 +97,12 @@ docker_deploy() {
 }
 
 docker_console() { 
-  local args=$@
   docker_up
-  docker_console_only ${=args}
+  local cmd=${@:-/bin/bash}
+  if [ -z "$CI" ];then
+    touch $SCRIPT_DIR/python/scripts/bash_history
+  fi
+  docker exec -it docker_python_1 /bin/bash
 }
 
 docker_console_only() {
