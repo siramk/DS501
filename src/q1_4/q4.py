@@ -9,14 +9,15 @@ import json
 import string
 import re
 import math
+from q2 import Q2
 
 
 def preprocess(data):
 	#Normalization
 	data = re.sub(r"[\[].*[\]]", "", data)
 	data = data.replace("\n", " ").lower()
-	for ch in string.punctuation:                                                                                                     
-    	data = data.replace(ch, " ") 
+	for ch in string.punctuation:
+		data = data.replace(ch, " ")
 	tokens = word_tokenize(data) 
 
 	#Remove Stopwords
@@ -74,5 +75,25 @@ for doc in data:
 		tf_idf[doc_id, token] = tf*idf[token]
 
 
-with open('temp','w+') as f:
-     f.write(str(tf_idf))
+with open('inverted_index_stem', 'r') as f:
+	postings = json.load(f)
+print("Enter query")
+query = input()
+terms = Q2.process_query(query)
+result = Q2.multi_intersect(terms, postings)
+
+rank_dict = {}
+for doc_id in result:
+	num = 0
+	den = 0
+	for term in terms:
+		num += tf_idf[doc_id, term]
+		den += pow(tf_idf[doc_id, term], 2)
+	den = math.sqrt(den)
+	rank_dict[doc_id] = num/den
+
+
+final_res = [key for key, value in sorted(rank_dict.items(), key=lambda item: item[1])]
+
+print(final_res)
+
