@@ -23,21 +23,22 @@ for doc in data:
 	#Normalization
 	content = re.sub(r"[\[].*[\]]", "", content)
 	content = content.replace("\n", " ").lower()
-	content = content.translate(str.maketrans('', '', string.punctuation)).strip()
-
+	for ch in string.punctuation:
+		content = content.replace(ch, " ") 
 	tokens = word_tokenize(content) 
 
 	#Remove Stopwords
 	tokens = [word for word in tokens if not word in stopwords.words()] 
 
+	# Lemmatization
+	lemmatizer=WordNetLemmatizer()
+	tokens = [lemmatizer.lemmatize(word) for word in tokens]
 
 	#Stemming
 	STEMMER = PorterStemmer()
 	tokens = [STEMMER.stem(word) for word in tokens]
 
-	# Lemmatization
-	lemmatizer=WordNetLemmatizer()
-	tokens = [lemmatizer.lemmatize(word) for word in tokens]
+
 
 	for word in set(tokens):
 		if word in inverted_index.keys(): 
