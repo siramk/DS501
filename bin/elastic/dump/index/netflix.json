@@ -41,7 +41,6 @@
             "properties": {
                 "type": {
                     "type": "keyword"
-                    
                 },
                 "title": {
                     "type": "text",
@@ -79,7 +78,12 @@
                 },
                 "description": {
                     "type": "text",
-                    "analyzer": "keyword_analyzer"
+                    "analyzer": "lowercase_analyzer",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword"
+                        }
+                    }
                 }
             }
         }
