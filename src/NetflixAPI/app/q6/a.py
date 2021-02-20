@@ -19,15 +19,15 @@ def scroll(pager, limit=10**5):
 
 
 def autocomplete_adults(search_query):
-    print("seacrh_query= ", search_query)
-    search_query = "/.*" + search_query.strip() + ".*/"
-    print("seacrh_query= ", search_query)
+    search_query = search_query.strip()
 
     query = {
         "sort": [{"_score": "desc"}],
         "query": {
-            "query_string": {
-                "query": search_query
+            "multi_match": {
+                "query":      search_query,
+                "type":       "phrase_prefix",
+                "fields":     ["*"]
             }
         }
     }
@@ -38,7 +38,7 @@ def autocomplete_adults(search_query):
 
 
 def autocomplete_kids(search_query):
-    search_query = "/.*" + search_query.strip() + ".*/"
+    search_query = search_query.strip()
     query = {
         "sort": [{"_score": "desc"}],
         "query": {
@@ -52,8 +52,10 @@ def autocomplete_kids(search_query):
                     {"prefix": {"rating": "TV-NC"}}
                 ],
                 "must": {
-                    "query_string": {
-                        "query": search_query
+                    "multi_match": {
+                        "query":      search_query,
+                        "type":       "phrase_prefix",
+                        "fields":     ["*"]
                     }
                 }
             }
