@@ -13,7 +13,7 @@ def Sort(sub_li):
 
 def process(content):
 	#Normalization
-	content = re.sub(r"[\[].*[\]]", "", content)
+	content = re.sub(r"[\[][0-9-]*[\]]", "", content)
 	content = content.replace("\n", " ").lower()
 	for ch in string.punctuation:
 		content = content.replace(ch, " ") 

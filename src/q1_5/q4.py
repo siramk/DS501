@@ -14,7 +14,7 @@ from q2 import Q2
 
 def preprocess(data):
 	#Normalization
-	data = re.sub(r"[\[].*[\]]", "", data)
+	data = re.sub(r"[\[][0-9-]*[\]]", "", data)
 	data = data.replace("\n", " ").lower()
 	for ch in string.punctuation:
 		data = data.replace(ch, " ")
