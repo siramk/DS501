@@ -93,7 +93,6 @@ for doc_id in result:
 	rank_dict[doc_id] = num/den
 
 
-final_res = [key for key, value in sorted(rank_dict.items(), key=lambda item: item[1])]
+final_res = [key for key, value in sorted(rank_dict.items(), reverse= True, key=lambda item: item[1])]
 
 print(final_res)
-
