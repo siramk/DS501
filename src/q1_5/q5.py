@@ -135,14 +135,14 @@ for query in queries:
 	terms = process_query(query)
 
 	start_time = time.time()
-	for i in range(2):
+	for i in range(100):
 		score = zone_score_posting(terms, index_posting)
 	print(len(score.keys()))
 	print("--- %s seconds ---" % (time.time() - start_time))
 
 
 	start_time = time.time()
-	for i in range(2):
+	for i in range(100):
 		score = zone_score_termlist(terms, index_termlist)
 	print(len(score.keys()))
 	print("--- %s seconds ---" % (time.time() - start_time))
