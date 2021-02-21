@@ -2,6 +2,7 @@ import json
 import nltk
 from nltk.stem import WordNetLemmatizer
 from nltk.stem import PorterStemmer
+import time
 
 def process_query(query):
 	query = query.lower()
@@ -20,13 +21,13 @@ def process_query(query):
 
 def weightedzone_posting(g, li1, li2 = []):
 	score = 0
-	if 'title' in li1:
+	if '.0' in li1:
 		score += g[0]
-	if 'abstract' in li1:
+	if '.1' in li1:
 		score += g[1]
-	if 'title' in li2:
+	if '.0' in li2:
 		score += g[0]
-	if 'abstract' in li2:
+	if '.1' in li2:
 		score += g[1]
 	return score
 
@@ -61,13 +62,87 @@ def zone_score_posting(terms, index_posting):
 				j += 1
 	return score
 
+def zone_score_termlist(terms, index_termlist):
+	score = {}
+	g = [0.7, 0.3]
+	if len(terms) == 1:
+		if terms[0] + '.0' in index_termlist:
+			p1 = index_termlist[terms[0] + '.0']
+			for doc in p1:
+				if doc in score:
+					score[doc] += 0.7
+				else:
+					score[doc] = 0.7
+		if terms[0] + '.1' in index_termlist:
+			p1 = index_termlist[terms[0] + '.1']
+			for doc in p1:
+				if doc in score:
+					score[doc] += 0.3
+				else:
+					score[doc] = 0.3
+		return score
+	else:
+		if terms[0] + '.0' not in index_termlist and terms[0] + '.1' not in index_termlist:
+			return score
+		if terms[1] + '.0' not in index_termlist and terms[1] + '.1' not in index_termlist:
+			return score
+		p1_title = []
+		p1_abstract = []
+		p2_title = []
+		p2_abstract = []
+		if terms[0] + '.0' in index_termlist:
+			p1_title = index_termlist[terms[0] + '.0']
+		if terms[0] + '.1' in index_termlist:
+			p1_abstract = index_termlist[terms[0] + '.1']
+		if terms[1] + '.0' in index_termlist:
+			p2_title = index_termlist[terms[1] + '.0']
+		if terms[1] + '.1' in index_termlist:
+			p2_abstract = index_termlist[terms[1] + '.1']
+		temp = {}
+		for doc in p1_title:
+			if doc in temp:
+				temp[doc] += 0.7
+			else:
+				temp[doc] = 0.7
+		for doc in p1_abstract:
+			if doc in temp:
+				temp[doc] += 0.3
+			else:
+				temp[doc] = 0.3
+		for doc in p2_title:
+			if doc in score:
+				score[doc] += 0.7
+			elif doc in temp:
+				score[doc] = temp[doc] + 0.7
+		for doc in p2_abstract:
+			if doc in score:
+				score[doc] += 0.3
+			elif doc in temp:
+				score[doc] = temp[doc] + 0.3
+	return score
+
+queries = ['monkey AND development', 'schistosoma', 'cholera and risk', 'mosquito and filariasis']
+
 
 with open('index_posting', 'r') as f:
 	index_posting = json.load(f)
 
-queries = ['monkey AND development', 'schistosoma', 'cholera and risk', 'mosquito and filariasis', 'health and structure']
+with open('index_termlist', 'r') as f:
+	index_termlist = json.load(f)
+
 
 for query in queries:
 	terms = process_query(query)
-	score = zone_score_posting(terms, index_posting)
-	print(score)
+
+	start_time = time.time()
+	for i in range(2):
+		score = zone_score_posting(terms, index_posting)
+	print(len(score.keys()))
+	print("--- %s seconds ---" % (time.time() - start_time))
+
+
+	start_time = time.time()
+	for i in range(2):
+		score = zone_score_termlist(terms, index_termlist)
+	print(len(score.keys()))
+	print("--- %s seconds ---" % (time.time() - start_time))
