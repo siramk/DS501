@@ -21,7 +21,7 @@ def preprocess(data):
 	tokens = word_tokenize(data) 
 
 	#Remove Stopwords
-	tokens = [word for word in tokens if not word in stopwords.words()] 
+	tokens = [word for word in tokens if not word in stopwords.words('english')] 
 
 	# Lemmatization
 	lemmatizer=WordNetLemmatizer()

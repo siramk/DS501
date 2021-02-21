@@ -17,11 +17,15 @@ def process(content):
 	content = content.replace("\n", " ").lower()
 	for ch in string.punctuation:
 		content = content.replace(ch, " ") 
-	tokens = word_tokenize(content) 
+	temp = word_tokenize(content) 
 
 	#Remove Stopwords
-	tokens = [word for word in tokens if not word in stopwords.words()] 
-
+	# tokens = [word for word in tokens if not word in stopwords.words('english')]
+	stop_words = set(stopwords.words('english'))
+	tokens = []
+	for w in temp:
+	    if w not in stop_words:
+	        tokens.append(w)
 	# Lemmatization
 	lemmatizer=WordNetLemmatizer()
 	tokens = [lemmatizer.lemmatize(word) for word in tokens]
@@ -41,8 +45,11 @@ with open('data.txt') as f:
 		article = eval(line)
 		title = article['title']
 		abstract = article['abstract']
-		pmid = int(article['pmid'])
-
+		
+		try:
+			pmid = int(article['pmid'])
+		except:
+			continue
 		title_token = process(title)
 		abstract_token = process(abstract)
 
@@ -50,9 +57,9 @@ with open('data.txt') as f:
 		for word in tokens:
 			li = [pmid]
 			if word in title_token:
-				li.append('title')
+				li.append(0)
 			if word in abstract_token:
-				li.append('abstract')
+				li.append(1)
 			if word in index:
 				index[word].append(li)
 			else:
@@ -62,4 +69,4 @@ with open('data.txt') as f:
 for token in index:
 	index[token] = Sort(index[token])
 with open('index_posting', 'w') as f:
-    json.dump(index, f, indent=4)
+    json.dump(index, f, indent=1)
