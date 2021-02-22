@@ -1,0 +1,14 @@
+{
+    "IIT and Computer": {
+        "Without_skip_pointer": 0.0008616447448730469,
+        "With_skip_pointer": 0.000701904296875
+    },
+    "IIT and mhrd": {
+        "Without_skip_pointer": 0.0005314350128173828,
+        "With_skip_pointer": 0.000553131103515625
+    },
+    "Bhilai and Raipur and bilaspur": {
+        "Without_skip_pointer": 0.0005459785461425781,
+        "With_skip_pointer": 0.0006530284881591797
+    }
+}
