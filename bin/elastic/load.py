@@ -23,12 +23,13 @@ class ES:
         index_name = ES.format_index_name(filename)
         
         if es_client.indices.exists(index_name):
-            return
+            return False
         filename = os.path.join(INDEX_DIR, filename)
         with open(filename, "r") as f:
             index_doc = json.load(f)
         es_client.indices.create(index_name, body=index_doc)
-
+        return True
+    
     @staticmethod
     def index_document(es_client, filename, docs):
         index_name = ES.format_index_name(filename)
@@ -37,6 +38,8 @@ class ES:
         for doc in docs:
             es_client.index(index=index_name, body=docs[doc], id=count)
             count += 1
+            if count%100 ==0:
+                print("count= ", count)
             
     @staticmethod
     def push():
@@ -45,7 +48,7 @@ class ES:
         filepath = DATA_DUMP_DIR
         for filename in os.listdir(filepath):
             print(filename)
-            ES.create_index(es, filename)
+            if(not ES.create_index(es, filename)): return
             with open(os.path.join(filepath, filename), "r") as fp:
                 docs = json.load(fp)
             ES.index_document(es, filename, docs)

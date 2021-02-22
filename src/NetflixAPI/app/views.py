@@ -15,9 +15,9 @@ app.add_url_rule('/autocomplete_adults/<string:search_query>', 'autocomplete_adu
 app.add_url_rule('/autocomplete_kids/<string:search_query>', 'autocomplete_kids', autocomplete_kids)
 app.add_url_rule('/pagination_movie/<int:pagesize>/<int:pageno>', 'pagination_movie', pagination_movie)
 app.add_url_rule('/pagination_tv/<int:pagesize>/<int:pageno>', 'pagination_tv', pagination_tv)
-app.add_url_rule('/exact_match_endpoint/<string:field>/<string:value>', 'exact_match_endpoint', exact_match_endpoint)
+app.add_url_rule('/exact_match/<string:field>/<string:value>', 'exact_match_endpoint', exact_match_endpoint)
 app.add_url_rule('/prefix_match/<string:search_query>', 'prefix_match', prefix_match)
-app.add_url_rule('/genre_match_endpoint/<string:boolean_query>', 'genre_match_endpoint', genre_match_endpoint)
+app.add_url_rule('/genre_match/<string:boolean_query>', 'genre_match_endpoint', genre_match_endpoint)
 
 
    

@@ -22,24 +22,29 @@ def autocomplete_adults(search_query):
     search_query = search_query.strip()
 
     query = {
+        "size":5,
         "sort": [{"_score": "desc"}],
         "query": {
+            
             "multi_match": {
-                "query":      search_query,
-                "type":       "phrase_prefix",
-                "fields":     ["*"]
+                "query": "order",
+                "type": "phrase_prefix",
+                "fields":     ["cast", "title", "country", "date_added", "description", "listed_in", "duration"]
             }
         }
     }
-    pager = es.search(index=INDEX_NAME, body=query,
-                      scroll='1m', size=1000)
-    hits = scroll(pager, 5)
-    return jsonify(hits[:5])
+
+    pager = es.search(index=INDEX_NAME, body=query)
+    hits = pager['hits']['hits']
+
+    return jsonify(hits)
+
 
 
 def autocomplete_kids(search_query):
     search_query = search_query.strip()
     query = {
+        "size":5,
         "sort": [{"_score": "desc"}],
         "query": {
             "bool": {
@@ -55,13 +60,14 @@ def autocomplete_kids(search_query):
                     "multi_match": {
                         "query":      search_query,
                         "type":       "phrase_prefix",
-                        "fields":     ["*"]
+                        "fields":    ["cast", "title", "country", "date_added", "description", "listed_in", "duration"]
                     }
                 }
             }
         }
     }
-    pager = es.search(index=INDEX_NAME, body=query,
-                      scroll='1m', size=1000)
-    hits = scroll(pager, 5)
-    return jsonify(hits[:5])
+
+    pager = es.search(index=INDEX_NAME, body=query)
+    hits = pager['hits']['hits']
+
+    return jsonify(hits)
