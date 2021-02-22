@@ -14,14 +14,14 @@ from q2 import Q2
 
 def preprocess(data):
 	#Normalization
-	data = re.sub(r"[\[].*[\]]", "", data)
+	data = re.sub(r"[\[][0-9-]*[\]]", "", data)
 	data = data.replace("\n", " ").lower()
 	for ch in string.punctuation:
 		data = data.replace(ch, " ")
 	tokens = word_tokenize(data) 
 
 	#Remove Stopwords
-	tokens = [word for word in tokens if not word in stopwords.words()] 
+	tokens = [word for word in tokens if not word in stopwords.words('english')] 
 
 	# Lemmatization
 	lemmatizer=WordNetLemmatizer()
@@ -93,7 +93,6 @@ for doc_id in result:
 	rank_dict[doc_id] = num/den
 
 
-final_res = [key for key, value in sorted(rank_dict.items(), key=lambda item: item[1])]
+final_res = [key for key, value in sorted(rank_dict.items(), reverse= True, key=lambda item: item[1])]
 
 print(final_res)
-

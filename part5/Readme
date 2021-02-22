@@ -1,0 +1,24 @@
+{
+    "monkey AND development": {
+        "number_results": 181,
+        "time_posting": 0.830756664276123,
+        "time_dictionary": 0.15709495544433594
+    },
+    "schistosoma": {
+        "number_results": 101,
+        "time_posting": 0.004007577896118164,
+        "time_dictionary": 0.0015666484832763672
+    },
+    "cholera and risk": {
+        "number_results": 10,
+        "time_posting": 0.31626462936401367,
+        "time_dictionary": 0.06807184219360352
+    },
+    "mosquito and filariasis": {
+        "number_results": 13,
+        "time_posting": 0.01778411865234375,
+        "time_dictionary": 0.0065076351165771484
+    }
+}
+
+Here, the time taken to retrieve the documents from posting index is greater than dictionary index. But as per the number of iteration, the posting index has to be faster than the dictionary index. The reason behind the opposite results we are getting is due to the data structure used by python.
