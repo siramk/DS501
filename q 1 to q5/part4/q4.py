@@ -40,6 +40,7 @@ def preprocess(data):
 	return tokens
 
 
+#Return the idf calculated for each token
 def inverse_doc_frequency(documents):
 	df = {}
 	for i in range(len(documents)):
@@ -66,6 +67,7 @@ for doc in data:
 
 idf = inverse_doc_frequency(documents)
 
+#Calculating the tf_idf 
 tf_idf = {}
 for doc in data:
 	doc_id = data[doc]['id']
@@ -88,6 +90,7 @@ for query in queries:
 	terms = Q2.process_query(query)
 	result = Q2.multi_intersect(terms, postings)
 
+	#Scoring the document retrived from Q2
 	rank_dict = {}
 	for doc_id in result:
 		num = 0
