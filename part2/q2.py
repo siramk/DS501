@@ -5,6 +5,7 @@ from nltk.stem import PorterStemmer
 
 
 class Q2:
+	#This returns the Intersection of two given sorted list
 	@staticmethod
 	def intersect(p1, p2):
 		i = 0
@@ -21,7 +22,9 @@ class Q2:
 				j += 1
 		return answer
 
+
 	@staticmethod
+	#Given the terms and the index, it will return the list of documents in which all these terms present 
 	def multi_intersect(terms, postings):
 		mul_list = []
 		result = []
@@ -30,7 +33,8 @@ class Q2:
 				mul_list.append(postings[term])
 			else:
 				return result
-		mul_list.sort(key=len, reverse=True)
+		#For optomization sort the multi list of postings in ascending order.
+		mul_list.sort(key=len)
 		result = mul_list[0]
 		for lis in mul_list[1:]:
 			if len(result) == 0:
@@ -38,6 +42,7 @@ class Q2:
 			result = Q2.intersect(result, lis)
 		return result
 
+	#TO preocess the query and return the tokens
 	@staticmethod
 	def process_query(query):
 		query = query.lower()

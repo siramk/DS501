@@ -12,6 +12,8 @@ parent = os.path.abspath(os.path.join(path, os.pardir))
 sys.path.insert(1, parent)
 from part2.q2 import Q2
 
+
+#Intersection of two list using skip pointers
 def skip_intersect(p1, p2):
 	answer = []
 	i = 0
@@ -43,6 +45,7 @@ def skip_intersect(p1, p2):
 			check_p2 += skip_size_p2
 	return answer
 
+#Given the terms and the index, it will return the list of documents in which all these terms present 
 def skip_multi_intersect(terms, postings):
 	mul_list = []
 	result = []

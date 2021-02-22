@@ -8,6 +8,7 @@ import json
 import string
 import re
 
+#Store the data crawled in variable data
 with open('crawled_data') as f:
 	data = json.load(f, object_pairs_hook=OrderedDict)
 
@@ -39,7 +40,9 @@ for doc in data:
 	tokens = [STEMMER.stem(word) for word in tokens]
 
 
-
+	#For each token check it exist or not.
+	#Append the doc_id in that token if exist.
+	#Otherwise create a new posting list
 	for word in set(tokens):
 		if word in inverted_index.keys(): 
 			inverted_index[word].append(doc_id)
@@ -48,6 +51,7 @@ for doc in data:
 
 inverted_index = OrderedDict(sorted(inverted_index.items()))
 
+#Dumping the index into the file
 with open('inverted_index', 'w') as f:
     json.dump(inverted_index, f, indent=4)
 

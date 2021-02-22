@@ -1,14 +1,14 @@
 {
     "IIT and Computer": {
-        "Without_skip_pointer": 0.0008616447448730469,
-        "With_skip_pointer": 0.000701904296875
+        "Without_skip_pointer": 0.0008611679077148438,
+        "With_skip_pointer": 0.0007700920104980469
     },
     "IIT and mhrd": {
-        "Without_skip_pointer": 0.0005314350128173828,
-        "With_skip_pointer": 0.000553131103515625
+        "Without_skip_pointer": 0.0005495548248291016,
+        "With_skip_pointer": 0.0005478858947753906
     },
     "Bhilai and Raipur and bilaspur": {
-        "Without_skip_pointer": 0.0005459785461425781,
-        "With_skip_pointer": 0.0006530284881591797
+        "Without_skip_pointer": 0.0005588531494140625,
+        "With_skip_pointer": 0.0006463527679443359
     }
 }
