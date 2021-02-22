@@ -1,7 +1,7 @@
 from flask import jsonify
 from elasticsearch import Elasticsearch
 
-INDEX_NAME = "netflix"
+INDEX_NAME = "netflix2"
 
 
 es = Elasticsearch("http://elasticsearch:9200/")
@@ -22,6 +22,7 @@ def scroll(pager, limit=10**5):
 def prefix_match(search_query):
     search_query = "/" + search_query.strip() + ".*/"
     query = {
+        "size":50,
         "query": {
             "query_string": {
                 "query": search_query,
@@ -35,9 +36,10 @@ def prefix_match(search_query):
 
 
 def exact_match_endpoint(field, value):
-    field = field.strip()
+    field = field.strip()+".keyword"
     value = value.strip()
     query = {
+        "size":50,
         "query": {
             "match_phrase": {
                 field: {
@@ -50,7 +52,6 @@ def exact_match_endpoint(field, value):
     hits = scroll(pager)
     return jsonify(hits)
 
-# TODO: gener match endpoint
 
 
 def genre_match_endpoint(boolean_query):
@@ -58,6 +59,7 @@ def genre_match_endpoint(boolean_query):
     boolean_query = boolean_query.replace("or", "OR")
     boolean_query = boolean_query.replace("not", "NOT")
     query = {
+        "size":50,
         "query": {
             "query_string": {
                 "query": boolean_query,

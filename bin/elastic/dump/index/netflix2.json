@@ -1,0 +1,134 @@
+{
+    "settings": {
+        "analysis": {
+            "analyzer": {
+                "ngram_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "standard",
+                    "filter": [
+                        "lowercase",
+                        "4_grams"
+                    ]
+                },
+                "lowercase_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "standard",
+                    "filter": [
+                        "lowercase"
+                    ]
+                },
+                "keyword_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "keyword",
+                    "filter": [
+                        "lowercase"
+                    ]
+                }
+            },
+            "filter": {
+                "4_grams": {
+                    "type": "ngram",
+                    "min_gram": 4,
+                    "max_gram": 4
+                }
+            }
+        },
+        "number_of_shards": 1,
+        "number_of_replicas": 0
+    },
+    "mappings": {
+        "properties": {
+            "type": {
+                "type": "keyword"
+            },
+            "title": {
+                "type": "text",
+                "analyzer": "lowercase_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "director": {
+                "type": "text",
+                "analyzer": "ngram_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "cast": {
+                "type": "text",
+                "analyzer": "lowercase_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "country": {
+                "type": "text",
+                "analyzer": "lowercase_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "date_added": {
+                "type": "text",
+                "analyzer": "lowercase_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "release_year": {
+                "type": "short",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "rating": {
+                "type": "keyword",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "duration": {
+                "type": "text",
+                "analyzer": "lowercase_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "listed_in": {
+                "type": "text",
+                "analyzer": "lowercase_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            "description": {
+                "type": "text",
+                "analyzer": "lowercase_analyzer",
+                "fields": {
+                    "keyword": {
+                        "type": "keyword"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -11,3 +11,8 @@ RUN pip install -r /tmp/requirements.txt
 COPY scripts/bashrc /root/.bashrc
 
 WORKDIR /work
+RUN pwd
+CMD ["./src/init_netflixapi.sh"]
+ENTRYPOINT ["/bin/bash"]
+
+
