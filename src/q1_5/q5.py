@@ -21,13 +21,13 @@ def process_query(query):
 
 def weightedzone_posting(g, li1, li2 = []):
 	score = 0
-	if '.0' in li1:
+	if 0 in li1:
 		score += g[0]
-	if '.1' in li1:
+	if 1 in li1:
 		score += g[1]
-	if '.0' in li2:
+	if 0 in li2:
 		score += g[0]
-	if '.1' in li2:
+	if 1 in li2:
 		score += g[1]
 	return score
 
