@@ -3,9 +3,9 @@ import os
 import json
 from flask import Flask
 
-from q6.a import scroll, autocomplete_adults, autocomplete_kids
-from q6.b import scroll_pagewise, pagination_movie, pagination_tv
-from q6.c import prefix_match, exact_match_endpoint, genre_match_endpoint
+from search_api.autocomplete import scroll, autocomplete_adults, autocomplete_kids
+from search_api.pagination import scroll_pagewise, pagination_movie, pagination_tv
+from search_api.query_macth import prefix_match, exact_match_endpoint, genre_match_endpoint
 
 
 
