@@ -13,7 +13,7 @@ Dependencies for NetflixSearchAPI
 
 # API details
 
-### DOMIAN​ : “​ https://netflix-ds501.herokuapp.com​ ”
+<!-- ### DOMIAN​ : “​ https://netflix-ds501.herokuapp.com​ ” -->
 
 ## REST API ENDPOINTS
 **NOTE**: All endpoints support only GET requests.
