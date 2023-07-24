@@ -1,6 +1,6 @@
 pytest==4.5.0
 python-dateutil==2.8.0
-nltk==3.4.5
+nltk==3.6.6
 pandas==0.24.2
 requests==2.22.0
 beautifulsoup4==4.8.0
